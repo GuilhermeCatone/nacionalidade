@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<style>
+    body {
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            opacity: 1;
+        }body::before {
+            content: "";
+            background-image: url(world-flag-hands-globe-international-national-1585107-pxhere.com\ \(1\).jpg);
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.75;
+            z-index: -1;
+        }
+</style>
+<body>
+    <h1>NACIONALIDADE</h1>
+   Qual sua nacionalidade: <input type="text" id="nasc">
+   <input type="button" value="verificar" onclick="calcular()" style="margin-top: 15px; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
+   <div id = res >
+
+   </div>
+<script>
+    function calcular() {
+    var nasci = document.getElementById('nasc')
+    var res = document.getElementById('res')
+    var vel = nasci.value
+    
+    if (vel === 'Brasil') {
+        res.innerHTML = "<p>Você é brasileiro</p>"
+    } else {
+        res.innerHTML = "<p>Você é estrangeiro</p>"
+    }
+
+}
+</script>
+</body>
+</html>
