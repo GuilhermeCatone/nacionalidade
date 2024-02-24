@@ -31,17 +31,17 @@
 
    </div>
 <script>
-    function calcular() {
-    var nasci = document.getElementById('nasc')
+function calcular() {
+    var nasci = document.getElementById('nasc').value.trim().toLowerCase()
     var res = document.getElementById('res')
-    var vel = nasci.value
     
-    if (vel === 'Brasil') {
-        res.innerHTML = "<p>Você é brasileiro</p>"
+    if (nasci === '') {
+        res.innerHTML = ""
+    } else if (nasci === 'brasil') {
+        res.innerHTML = `<p> Você é <strong style="color: green;">BRASILEIRO</strong></p>`
     } else {
-        res.innerHTML = "<p>Você é estrangeiro</p>"
+        res.innerHTML = `<p> Você é <strong style="color: blue;">ESTRANGEIRO</strong></p>`
     }
-
 }
 </script>
 </body>
